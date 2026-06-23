@@ -1,0 +1,75 @@
+.user-card{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+
+    cursor:pointer;
+
+}
+
+.user-card:hover{
+
+    background:#f5f5f5;
+
+}
+
+.user-card.active{
+
+    background:#e8f5e9;
+
+}
+
+.user-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.user-info h4{
+
+    margin:0;
+
+}
+
+.user-info p{
+
+    margin:4px 0;
+
+    color:#555;
+
+    font-size:14px;
+
+}
+
+.user-info small{
+
+    color:gray;
+
+}
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+}
+
+.online{
+
+    background:#22c55e;
+
+}
+
+.offline{
+
+    background:#c4c4c4;
+
+}
