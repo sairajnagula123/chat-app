@@ -1,71 +1,109 @@
-/* Full page */
-.register-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f4f7fb;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Card */
-.register-card {
-    width: 380px;
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+/* Full Page */
+.register-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
 }
 
-.register-card h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
+/* Register Card */
+.register-card{
+    width:400px;
+    padding:40px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.25);
+    animation:fadeIn .7s ease;
+}
+
+/* Heading */
+.register-card h2{
+    text-align:center;
+    color:#fff;
+    font-size:32px;
+    margin-bottom:30px;
+    font-weight:600;
 }
 
 /* Inputs */
-.register-card input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    box-sizing: border-box;
-    outline: none;
+.register-card input{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.18);
+    color:#fff;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
 }
 
-.register-card input:focus {
-    border-color: #4a90e2;
+.register-card input::placeholder{
+    color:#ececec;
+}
+
+.register-card input:focus{
+    background:rgba(255,255,255,.25);
+    box-shadow:0 0 10px rgba(255,255,255,.3);
 }
 
 /* Button */
-.register-card button {
-    width: 100%;
-    padding: 12px;
-    background: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+.register-card button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#fff;
+    color:#667eea;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.register-card button:hover {
-    background: #357abd;
+.register-card button:hover{
+    transform:translateY(-3px);
+    background:#f2f2f2;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 /* Link */
-.register-card a {
-    display: block;
-    text-align: center;
-    margin-top: 18px;
-    color: #4a90e2;
-    text-decoration: none;
-    font-weight: bold;
+.register-card a{
+    display:block;
+    text-align:center;
+    margin-top:22px;
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
 }
 
-.register-card a:hover {
-    text-decoration: underline;
+.register-card a:hover{
+    color:#ffe082;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
