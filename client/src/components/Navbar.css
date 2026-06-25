@@ -1,38 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .navbar {
     height: 70px;
-    background: #075e54;
-    color: white;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0 35px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar h2 {
     margin: 0;
     font-size: 28px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar h2::before {
+    content: "💬";
+    font-size: 30px;
 }
 
 .navbar button {
-    background: #25d366;
-    color: white;
+    padding: 11px 24px;
     border: none;
-    padding: 10px 22px;
-    border-radius: 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    color: white;
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 .navbar button:hover {
-    background: #1faa52;
+    background: white;
+    color: #764ba2;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .navbar button:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
 }

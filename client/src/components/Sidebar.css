@@ -1,62 +1,72 @@
 /* Sidebar */
 .sidebar {
-    width: 330px;
+    width: 340px;
     height: 100vh;
     background: #ffffff;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #e6e6e6;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Heading */
+/* Header */
 .sidebar h2 {
-    padding: 20px;
-    font-size: 24px;
+    padding: 22px;
+    font-size: 28px;
     font-weight: 600;
     color: #075e54;
-    border-bottom: 1px solid #eee;
-    background: #f8f9fa;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 /* User Card */
 .user-card {
-    padding: 15px 18px;
-    border-bottom: 1px solid #f1f1f1;
+    margin: 8px 10px;
+    padding: 15px;
+    border-radius: 14px;
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
 .user-card:hover {
-    background: #f5f5f5;
+    background: #f5f7fa;
+    transform: translateX(4px);
 }
 
-/* Selected user */
+/* Active Chat */
 .user-card.active {
     background: #dcf8c6;
-    border-left: 5px solid #25d366;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
-/* Flex Layout */
+/* Layout */
 .user-info {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
+/* Left section */
+.user-info div {
+    flex: 1;
+}
+
 /* Username */
 .user-info h4 {
     margin: 0;
     font-size: 17px;
+    font-weight: 600;
     color: #222;
 }
 
-/* Last message */
+/* Last Message */
 .user-info p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 6px 0;
     color: #666;
+    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -69,21 +79,21 @@
     font-size: 12px;
 }
 
-/* Status dot */
+/* Status Dot */
 .status-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    margin-left: 12px;
     margin-top: 6px;
+    flex-shrink: 0;
 }
 
-/* Online */
 .status-dot.online {
     background: #25d366;
-    box-shadow: 0 0 6px #25d366;
+    box-shadow: 0 0 8px rgba(37,211,102,.7);
 }
 
-/* Offline */
 .status-dot.offline {
     background: #bdbdbd;
 }
@@ -94,11 +104,11 @@
 }
 
 .sidebar::-webkit-scrollbar-track {
-    background: #f5f5f5;
+    background: transparent;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-    background: #c5c5c5;
+    background: #d0d0d0;
     border-radius: 20px;
 }
 
