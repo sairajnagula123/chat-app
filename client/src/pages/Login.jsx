@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import api from "../services/api";
+import "./Login.css";
 
 function Login() {
 
@@ -48,21 +49,17 @@ function Login() {
     };
 
     return (
-
-        <div style={{ padding: "30px" }}>
-
+    <div className="login-container">
+        <div className="login-card">
             <h2>Login</h2>
 
             <form onSubmit={handleSubmit}>
-
                 <input
                     type="email"
                     name="email"
                     placeholder="Email"
                     onChange={handleChange}
                 />
-
-                <br /><br />
 
                 <input
                     type="password"
@@ -71,23 +68,17 @@ function Login() {
                     onChange={handleChange}
                 />
 
-                <br /><br />
-
                 <button type="submit">
                     Login
                 </button>
-
             </form>
-
-            <br />
 
             <Link to="/register">
                 Don't have an account?
             </Link>
-
         </div>
-
-    );
+    </div>
+);
 
 }
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import api from "../services/api";
+import "./Register.css";
 
 function Register() {
     const navigate = useNavigate();
@@ -33,7 +34,8 @@ function Register() {
     };
 
     return (
-        <div style={{ padding: "30px" }}>
+    <div className="register-container">
+        <div className="register-card">
             <h2>Register</h2>
 
             <form onSubmit={handleSubmit}>
@@ -45,16 +47,12 @@ function Register() {
                     onChange={handleChange}
                 />
 
-                <br /><br />
-
                 <input
                     type="email"
                     name="email"
                     placeholder="Enter Email"
                     onChange={handleChange}
                 />
-
-                <br /><br />
 
                 <input
                     type="password"
@@ -63,22 +61,18 @@ function Register() {
                     onChange={handleChange}
                 />
 
-                <br /><br />
-
                 <button type="submit">
                     Register
                 </button>
 
             </form>
 
-            <br />
-
             <Link to="/">
                 Already have an account?
             </Link>
-
         </div>
-    );
+    </div>
+);
 }
 
 export default Register;
